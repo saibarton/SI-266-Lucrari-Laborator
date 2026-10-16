@@ -1,0 +1,62 @@
+$ python text_octeti.py
+Text: Salut
+Octeti: b'Salut'
+Primul octet: 83
+Hex: 53616c7574
+Din hex: b'Salut'
+
+$ python arsenal/forensics/decode.py probe/mesaj.txt --fisier
+Straturi: base64 -> base64 -> hex
+Rezultat: FLAG{straturi_de_encoding}
+Fisa salvata: fisa.json
+
+$ python arsenal/forensics/decode.py probe/xor.bin --fisier --xor --fisa rezultate/xor.json
+Cheie XOR: 128 = 0x80
+Variante ASCII citibile: 17
+Straturi: xor
+Rezultat: Un singur octet tine tot secretul... gaseste-l! FLAG{xor_un_octet}
+Fisa salvata: xor.json
+
+$ python arsenal/forensics/decode.py probe/hashuri.txt --fisier --hash --fisa rezultate/hashuri.json
+md5 5f4dcc3b5aa765d61d8327deb882cf99 -> password
+md5 8621ffdbc5698829397d97767ac13db3 -> dragon
+md5 d8578edf8458ce06fbc5bb76a58c5ca4 -> qwerty
+md5 0d107d09f5bbe40cade3de5c71e9e9b7 -> letmein
+md5 d0763edaa9d9bd2a9516280e9044d885 -> monkey
+Fisa salvata: hashuri.json
+
+$ python forensics.py
+B1. Tipul real al fisierelor
+foto.jpg -> jpeg
+ascuns.png -> png
+
+B2. Text citibil din ascuns.png
+IHDR
+IDATx
+IEND
+secret.txtFLAG{ascuns_prin_carving}
+secret.txtPK
+
+B3. Metadate EXIF si GPS
+DateTime = 2026:09:14 10:30:00
+Make = Apple
+Model = iPhone 13
+Latitudine: 47.016667
+Longitudine: 28.857500
+
+B4. Arhiva ascunsa
+Arhiva extrasa de la octetul 782
+gasit.zip -> zip/docx
+Fisiere: secret.txt
+secret.txt: FLAG{ascuns_prin_carving}
+
+$ python stego.py ascunde probe/foto.jpg
+Imagine salvata: stego.png
+Mesaj ascuns: FLAG{ascuns_in_pixeli}
+C:\Users\saiba\Documents\Codex\2026-10-16\new-chat-2\outputs\L5_TP_Munteanu_Ion_SI-266\Laborator_5\stego.py:18: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pixeli = list(imagine.getdata())
+
+$ python stego.py dezvaluie stego.png
+Mesaj dezvaluit: FLAG{ascuns_in_pixeli}
+C:\Users\saiba\Documents\Codex\2026-10-16\new-chat-2\outputs\L5_TP_Munteanu_Ion_SI-266\Laborator_5\stego.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  for pixel in imagine.getdata():

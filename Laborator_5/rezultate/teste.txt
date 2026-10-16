@@ -1,0 +1,25 @@
+$ python -m unittest discover -s teste -v
+test_base64 (test_decode.TestDecode.test_base64) ... ok
+test_hash_negasit (test_decode.TestDecode.test_hash_negasit) ... ok
+test_hashuri (test_decode.TestDecode.test_hashuri) ... ok
+test_hex (test_decode.TestDecode.test_hex) ... ok
+test_straturi_multiple (test_decode.TestDecode.test_straturi_multiple) ... ok
+test_text_necunoscut (test_decode.TestDecode.test_text_necunoscut) ... ok
+test_url (test_decode.TestDecode.test_url) ... ok
+test_xor (test_decode.TestDecode.test_xor) ... ok
+test_carving (test_fisiere.TestFisiere.test_carving) ... ok
+test_gps (test_fisiere.TestFisiere.test_gps) ... ok
+test_lsb (test_fisiere.TestFisiere.test_lsb) ... C:\Users\saiba\Documents\Codex\2026-10-16\new-chat-2\outputs\L5_TP_Munteanu_Ion_SI-266\Laborator_5\stego.py:18: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pixeli = list(imagine.getdata())
+C:\Users\saiba\Documents\Codex\2026-10-16\new-chat-2\outputs\L5_TP_Munteanu_Ion_SI-266\Laborator_5\stego.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  for pixel in imagine.getdata():
+C:\Users\saiba\Documents\Codex\2026-10-16\new-chat-2\outputs\L5_TP_Munteanu_Ion_SI-266\Laborator_5\teste\test_fisiere.py:47: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  for a, b in zip(original.getdata(), modificat.getdata()):
+ok
+test_lsb_mesaj_prea_lung (test_fisiere.TestFisiere.test_lsb_mesaj_prea_lung) ... ok
+test_magic_bytes (test_fisiere.TestFisiere.test_magic_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.129s
+
+OK

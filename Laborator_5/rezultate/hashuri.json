@@ -1,0 +1,30 @@
+{
+  "strat": "hash",
+  "rezultat": [
+    {
+      "hash": "5f4dcc3b5aa765d61d8327deb882cf99",
+      "algoritm": "md5",
+      "parola": "password"
+    },
+    {
+      "hash": "8621ffdbc5698829397d97767ac13db3",
+      "algoritm": "md5",
+      "parola": "dragon"
+    },
+    {
+      "hash": "d8578edf8458ce06fbc5bb76a58c5ca4",
+      "algoritm": "md5",
+      "parola": "qwerty"
+    },
+    {
+      "hash": "0d107d09f5bbe40cade3de5c71e9e9b7",
+      "algoritm": "md5",
+      "parola": "letmein"
+    },
+    {
+      "hash": "d0763edaa9d9bd2a9516280e9044d885",
+      "algoritm": "md5",
+      "parola": "monkey"
+    }
+  ]
+}

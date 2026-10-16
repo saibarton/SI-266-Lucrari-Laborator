@@ -13,6 +13,7 @@ Depozit pentru lucrările de laborator la disciplina Tehnici de programare și p
 - Laboratorul 2 — raport.
 - Laboratorul 3 — program Python.
 - Laboratorul 4 — arhivă cu lucrarea.
+- Laboratorul 5 — [decoder, forensics și steganografie](Laborator_5); [raport](Laborator_5/raport.md), probe și rezultate.
 - Atestarea 1 — `Examen/1/Munteanu_Ion/main.py` și `checker.py`.
 
 ## Rularea atestării

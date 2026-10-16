@@ -1,0 +1,7 @@
+{
+  "strat": "xor",
+  "pasi": [],
+  "cheie": 128,
+  "variante_citibile": 17,
+  "rezultat": "Un singur octet tine tot secretul... gaseste-l! FLAG{xor_un_octet}"
+}
